@@ -15,6 +15,7 @@ turnaround = 4
 beats_per_minute = 120.
 beats_per_measure = 4.
 pulses_per_quarter_note__resolution = 100.
+output_directory = 'output'
 output_filename = 'randomly_generated_chord_progressions.mid'
 N = 500
 
@@ -85,4 +86,4 @@ for n in range(0, N):
 
 eot = midi.EndOfTrackEvent(tick=1)
 track.append(eot)
-midi.write_midifile(output_filename, pattern)
+midi.write_midifile(output_directory + '/' + output_filename, pattern)
